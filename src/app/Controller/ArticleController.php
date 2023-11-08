@@ -16,7 +16,7 @@ class ArticleController extends Controller
     public function listArticle()
     {
         $message = 'Liste des articles';
-        $articles = ArticleModel::all();
+        $articles = ArticleModel::all('DESC');
         $nbArticle = ArticleModel::count();
 
         $this->render('app.article.listarticle',array(

@@ -22,9 +22,9 @@ class Model
     /**
      * @return array => all
      */
-    public static function all()
+    public static function all($order = 'ASC')
     {
-         return App::getDatabase()->query("SELECT * FROM ".self::getTable(),get_called_class());
+         return App::getDatabase()->query("SELECT * FROM ".self::getTable() . " ORDER BY id " . $order ,get_called_class());
     }
 
     public static function findById($id,$columId = 'id')
