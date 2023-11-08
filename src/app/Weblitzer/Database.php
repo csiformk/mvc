@@ -70,7 +70,7 @@ class Database {
 
         $query->execute($bind);
 
-        $query->setFetchMode(PDO::FETCH_CLASS,$className);
+        $query->setFetchMode(PDO::FETCH_ASSOC);
         if($one) {
             return $query->fetch();
         } else {

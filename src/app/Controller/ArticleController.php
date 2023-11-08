@@ -24,6 +24,15 @@ class ArticleController extends Controller
         ));
     }
 
+    public function show($id)
+    {
+        $article = ArticleModel::findById($id);
+        
+        $this->render('app.article.showarticle',array(
+            'article' => $article,
+        ));
+    }
+
 
 
 }
