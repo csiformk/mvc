@@ -46,11 +46,12 @@ class ArticleController extends Controller
            $validerArticle = new Validation();
            
            $errors['titre'] = $validerArticle->textValid($postArticle['titre'],'titre',5,100);
-           $errors['contenu'] = $validerArticle->textValid($postArticle['contenu'],'contenu',50,1000);
+           $errors['contenu'] = $validerArticle->textValid($postArticle['contenu'],'contenu',10,1000);
            
            if ($validerArticle->IsValid($errors)) :
             // Methode d'insertion
-            echo "Insertion";
+            ArticleModel::insert($postArticle);
+            $this->redirect('articles');
            endif;
 
         endif;
