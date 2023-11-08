@@ -26,11 +26,24 @@ class ArticleController extends Controller
 
     public function show($id)
     {
-        $article = ArticleModel::findById($id);
+        $article = $this->isArticleExist($id);
         
         $this->render('app.article.showarticle',array(
             'article' => $article,
         ));
+    }
+
+    public function isArticleExist($id)
+    {
+        $article = ArticleModel::findById($id);
+        
+/*         if (empty($article)):
+            $this->Abort404();
+        endif;
+
+        return $article; */
+
+        return (empty($article)) ? $this->Abort404() :  $article;
     }
 
 
