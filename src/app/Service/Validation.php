@@ -7,7 +7,9 @@ class Validation
 
     public function IsValid($errors)
     {
+        //var_dump($errors);
         foreach ($errors as $key => $value) {
+           //var_dump($value);
             if(!empty($value)) {
                 return false;
             }
