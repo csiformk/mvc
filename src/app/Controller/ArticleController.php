@@ -85,12 +85,5 @@ class ArticleController extends Controller
         return (empty($article)) ? $this->Abort404() :  $article;
     }
 
-    public function isValidArticle($errors, $validerArticle, $postArticle)
-    {
-        $errors['titre'] = $validerArticle->textValid($postArticle['titre'],'titre',5,100);
-        $errors['contenu'] = $validerArticle->textValid($postArticle['contenu'],'contenu',50,1000);
-        //var_dump($errors);
-    }
-
 
 }
