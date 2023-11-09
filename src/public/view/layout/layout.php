@@ -17,6 +17,7 @@
               <li><a href="<?= $view->path('contact'); ?>">Contact</a></li>
               <li><a href="<?= $view->path('articles'); ?>">Articles</a></li>
               <li><a href="<?= $view->path('admin'); ?>">Admin</a></li>
+              <li><a href="<?= $view->path('admin_user'); ?>">Admin User</a></li>
           </ul>
       </nav>
     </header>
