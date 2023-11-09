@@ -8,3 +8,8 @@
         Supprimer cet article
     </a>
 </p>
+<p>
+<a href="<?= $view->path('edit',[$article['id']]); ?>">
+Modifier cet article
+</a>
+</p>
