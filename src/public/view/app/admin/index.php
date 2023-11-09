@@ -11,7 +11,7 @@
         </tr>
 
 <?php 
-$i=0;
+$i=1;
 foreach ($articles as $article) : ?>
         <tr>
         <td><?=$i?></td>
